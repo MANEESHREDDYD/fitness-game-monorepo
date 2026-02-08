@@ -46,5 +46,10 @@
     "command": "workbench.action.terminal.sendSequence",
     "args": { "text": "adb devices\n" },
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+e",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Android: Start Emulator + Deploy App"
   }
 ]

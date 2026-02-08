@@ -1,14 +1,13 @@
 {
   "recommendations": [
     "ms-vscode.vscode-android",
-    "aarav.expand-selection",
     "msjsdiag.vscode-react-native",
     "rangav.vscode-thunder-client",
+    "nativescript-nx.vscode-android-emulator",
     "ES7-bases-redux-react-snippets.vscode-redux-snippets",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "redhat.vscode-xml",
-    "Equim.equim-delta-executor",
     "GitHub.copilot",
     "ms-azuretools.azure-cli",
     "ms-azure-tools.vscode-cosmosdb",
