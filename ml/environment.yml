@@ -1,0 +1,10 @@
+name: fitness-game-ml
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - pandas==2.2.2
+      - scikit-learn==1.5.1
+      - joblib==1.4.2

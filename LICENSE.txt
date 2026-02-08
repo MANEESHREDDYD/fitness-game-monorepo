@@ -1,0 +1,6 @@
+fitness-game-monorepo/
+├── backend-api/          # Node.js + Express + TypeScript API
+├── mobile-app/           # React Native + Expo mobile app
+├── infra/                # Azure infrastructure setup scripts
+├── ml/                   # Machine learning (future development)
+└── .github/workflows/    # CI/CD pipeline
