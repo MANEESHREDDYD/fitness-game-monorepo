@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "React Native on Android Emulator",
+      "cwd": "${workspaceFolder}/mobile-app",
+      "type": "reactnative",
+      "request": "launch",
+      "platform": "android",
+      "sourceMaps": true,
+      "outDir": "${workspaceFolder}/mobile-app/.vscode-debug"
+    },
+    {
+      "name": "Attach to Metro Debugger",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9223,
+      "pathMapping": {
+        "/debuggerWorker.js": "${workspaceFolder}/mobile-app/node_modules/metro/src/Client.js",
+        "/": "${workspaceFolder}/mobile-app/"
+      }
+    },
+    {
+      "name": "Hermes React Native (Android)",
+      "type": "hermes",
+      "request": "attach",
+      "port": 8081
+    },
+    {
+      "name": "Attach to Android Device",
+      "type": "reactnative",
+      "request": "attach",
+      "platform": "android"
+    }
+  ]
+}
