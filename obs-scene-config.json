@@ -1,0 +1,88 @@
+{
+  "SceneCollection": {
+    "name": "Fitness Game Demo",
+    "scenes": [
+      {
+        "name": "Main Demo",
+        "sources": [
+          {
+            "name": "VS Code",
+            "type": "window_capture",
+            "settings": {
+              "window": "C:\\Users\\md200\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+              "capture_window_text": true,
+              "client_area": true
+            },
+            "position": { "x": 0, "y": 0 },
+            "size": { "width": 1920, "height": 720 },
+            "crop": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+            "scale": { "x": 0.6, "y": 0.6 },
+            "rotation": 0,
+            "visible": true,
+            "locked": false,
+            "volume": 0
+          },
+          {
+            "name": "Android Emulator",
+            "type": "window_capture",
+            "settings": {
+              "window": "Pixel_6_API_34",
+              "capture_window_text": true,
+              "client_area": true
+            },
+            "position": { "x": 1200, "y": 0 },
+            "size": { "width": 720, "height": 1080 },
+            "crop": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+            "scale": { "x": 0.35, "y": 0.35 },
+            "rotation": 0,
+            "visible": true,
+            "locked": false,
+            "volume": 0
+          },
+          {
+            "name": "Terminal/Backend",
+            "type": "window_capture",
+            "settings": {
+              "window": "Windows Terminal",
+              "capture_window_text": true,
+              "client_area": true
+            },
+            "position": { "x": 0, "y": 700 },
+            "size": { "width": 1920, "height": 380 },
+            "crop": { "left": 0, "top": 0, "right": 0, "bottom": 0 },
+            "scale": { "x": 1.0, "y": 0.15 },
+            "rotation": 0,
+            "visible": true,
+            "locked": false,
+            "volume": 1
+          },
+          {
+            "name": "Text Overlay - Timer",
+            "type": "text_gdiplus",
+            "settings": {
+              "text": "Fitness Game Platform Demo",
+              "color": 16777215,
+              "font": {
+                "face": "Arial",
+                "size": 48,
+                "style": "bold"
+              },
+              "outline": true,
+              "outline_color": 0,
+              "outline_size": 2
+            },
+            "position": { "x": 50, "y": 50 },
+            "size": { "width": 800, "height": 100 },
+            "visible": true,
+            "locked": true
+          }
+        ],
+        "settings": {
+          "canvas_size": { "width": 1920, "height": 1080 },
+          "base_width": 1920,
+          "base_height": 1080
+        }
+      }
+    ]
+  }
+}
