@@ -49,6 +49,7 @@ export const matchService = {
       id,
       parkId,
       teamSize,
+      maxPlayers: teamSize,
       code,
       status: "waiting",
       players: [],
@@ -58,7 +59,9 @@ export const matchService = {
         red: 0
       },
       timerSecRemaining: DEFAULT_TIMER_SEC,
-      lastUpdatedIso: nowIso()
+      lastUpdatedIso: nowIso(),
+      creatorId,
+      startTime: nowIso()
     };
 
     matches.set(id, match);

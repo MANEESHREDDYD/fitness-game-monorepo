@@ -26,6 +26,9 @@ export interface MatchState {
   scores: Record<string, number>;
   timerSecRemaining: number;
   lastUpdatedIso: string;
+  creatorId?: string;
+  startTime?: string;
+  maxPlayers?: number;
 }
 
 export interface ChatMessage {
