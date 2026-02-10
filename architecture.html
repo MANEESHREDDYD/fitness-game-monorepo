@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Game - System Architecture Dashboard</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --panel-bg: #1e1e1e;
+            --primary-accent: #4caf50;
+            --secondary-accent: #00d4ff;
+            --error-accent: #b71c1c;
+            --text-color: #e0e0e0;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding: 40px 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 { 
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: #888;
+            font-size: 1.1rem;
+        }
+
+        .dashboard-container {
+            background-color: var(--panel-bg); 
+            padding: 40px; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6); 
+            width: 90%;
+            max-width: 1200px;
+            border: 1px solid var(--border-color);
+        }
+
+        .mermaid {
+            display: flex;
+            justify-content: center;
+        }
+
+        .legend {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #555;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>System Architecture Dashboard</h1>
+        <p class="subtitle">High-Availability & Event-Driven Topology</p>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="mermaid">
+            graph TD
+            
+            subgraph Client_Layer ["Mobile Client (React Native Fabric)"]
+                direction TB
+                UI[Fabric UI Thread] --> State[Zustand Store]
+                State --> Bridge{Bridge / Interop}
+                
+                subgraph Circuit_Breaker ["Indoor Mode Engine"]
+                    direction LR
+                    GPS[GPS Module]
+                    Accel[Accelerometer]
+                    Logic{Circuit Breaker}
+                end
+
+                Bridge -- "Standard Path" --> GPS
+                Bridge -- "Fallback Path" --> Accel
+                
+                GPS -.->|Signal Loss| Logic
+                Logic -->|Activate Internal Telemetry| Accel
+                
+                %% Styles for fallback path
+                style Logic fill:#b71c1c,stroke:#ffcdd2,stroke-width:2px
+                style Accel fill:#263238,stroke:#ff9800,stroke-width:2px
+                linkStyle 3 stroke:#ff9800,stroke-width:3px
+                linkStyle 5 stroke:#ff9800,stroke-width:3px
+            end
+
+            subgraph Edge_Services ["Edge Connectivity Layer"]
+                LB[Nginx Load Balancer]
+                Socket[Socket.io Cluster]
+            end
+
+            subgraph Backend_Core ["Microservices Layer"]
+                GameEngine[Node.js Game Loop]
+                Auth[Auth Service]
+            end
+
+            subgraph Storage_Layer ["Data Persistence"]
+                Redis[(Redis - Hot Data/Leaderboards)]
+                Postgres[(PostgreSQL - Profiles/History)]
+            end
+
+            %% Global Data Flows
+            Accel -->|"High-Res Telemetry"| Socket
+            GPS -->|"Geospatial Coords"| Socket
+            Socket <--> LB
+            LB <--> GameEngine
+            LB --> Auth
+            
+            GameEngine <--> Redis
+            GameEngine --> Postgres
+            Auth <--> Postgres
+            
+            %% Class Definitions
+            classDef default color:#eee,stroke-width:2px;
+            classDef box fill:#2d2d2d,stroke:#555;
+            classDef highlight fill:#1b5e20,stroke:#81c784;
+            classDef alert fill:#b71c1c,stroke:#ff5252;
+            
+            class UI,State,Bridge,GPS,LB,Socket,GameEngine,Auth,Redis,Postgres box
+            class Logic alert
+        </div>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item"><span class="dot" style="background: #4caf50;"></span> Standard Flow</div>
+        <div class="legend-item"><span class="dot" style="background: #ff9800;"></span> Indoor Fallback Path</div>
+        <div class="legend-item"><span class="dot" style="background: #b71c1c;"></span> Circuit Breaker</div>
+    </div>
+
+    <footer>
+        Technical Design Docs // Fitness Game Monorepo
+    </footer>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#4caf50',
+                edgeColor: '#888',
+                fontFamily: 'Inter'
+            }
+        });
+    </script>
+</body>
+</html>

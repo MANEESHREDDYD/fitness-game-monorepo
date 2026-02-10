@@ -1,6 +1,0 @@
-pandas==2.2.2
-scikit-learn==1.5.1
-joblib==1.4.2
-azure-cosmos==4.7.0
-azure-identity==1.17.1
-azure-ai-ml==1.16.1

@@ -1,0 +1,254 @@
+﻿node.exe : FAIL compo
+nents/__tests__/simpl
+e.test.js
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (FAIL co   
+ mponents/__tests    
+__/simple.test.j    
+s:String) [], Re    
+moteException
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  ÔùÅ Test suite 
+failed to run
+
+    Cannot find 
+module 
+'babel-preset-expo'
+    Require stack:
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\@bab
+el\core\lib\config\fi
+les\plugins.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\@bab
+el\core\lib\config\fi
+les\index.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\@bab
+el\core\lib\index.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\jest
+-snapshot\build\index
+.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\jest
+-runtime\build\index.
+js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\@jes
+t\core\build\index.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\jest
+-cli\build\index.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\jest
+-cli\bin\jest.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\jest
+\bin\jest.js
+
+    Make sure that 
+all the Babel 
+plugins and presets 
+you are using
+    are defined as 
+dependencies or 
+devDependencies in 
+your package.json
+    file. It's 
+possible that the 
+missing plugin is 
+loaded by a preset
+    you are using 
+that forgot to add 
+the plugin to its 
+dependencies: you
+    can workaround 
+this problem by 
+explicitly adding 
+the missing package
+    to your 
+top-level 
+package.json.
+
+      at 
+tryRequireResolve (no
+de_modules/@babel/cor
+e/lib/config/files/pl
+ugins.js:128:11)
+      at resolveStand
+ardizedNameForRequire
+ (node_modules/@babel
+/core/lib/config/file
+s/plugins.js:162:19)
+      at resolveStand
+ardizedName (node_mod
+ules/@babel/core/lib/
+config/files/plugins.
+js:183:12)
+      at loadPreset (
+node_modules/@babel/c
+ore/lib/config/files/
+plugins.js:68:7)
+          at 
+loadPreset.next 
+(<anonymous>)
+      at 
+createDescriptor (nod
+e_modules/@babel/core
+/lib/config/config-de
+scriptors.js:140:16)
+          at createDe
+scriptor.next 
+(<anonymous>)
+      at 
+evaluateSync (node_mo
+dules/gensync/index.j
+s:251:28)
+      at node_modules
+/gensync/index.js:31:
+34
+          at 
+Array.map 
+(<anonymous>)
+      at 
+gensync.sync (node_mo
+dules/gensync/index.j
+s:31:22)
+      at gensync.all 
+(node_modules/gensync
+/index.js:210:24)
+      at 
+createDescriptors (no
+de_modules/@babel/cor
+e/lib/config/config-d
+escriptors.js:102:41)
+          at createDe
+scriptors.next 
+(<anonymous>)
+      at createPreset
+Descriptors (node_mod
+ules/@babel/core/lib/
+config/config-descrip
+tors.js:96:17)
+          at createPr
+esetDescriptors.next 
+(<anonymous>)
+      at node_modules
+/@babel/core/lib/gens
+ync-utils/functional.
+js:22:27
+      at 
+mergeChainOpts (node_
+modules/@babel/core/l
+ib/config/config-chai
+n.js:350:34)
+          at 
+mergeChainOpts.next 
+(<anonymous>)
+      at chainWalker 
+(node_modules/@babel/
+core/lib/config/confi
+g-chain.js:316:14)
+          at 
+chainWalker.next 
+(<anonymous>)
+      at 
+loadFileChain (node_m
+odules/@babel/core/li
+b/config/config-chain
+.js:191:24)
+          at 
+loadFileChain.next 
+(<anonymous>)
+      at 
+buildRootChain (node_
+modules/@babel/core/l
+ib/config/config-chai
+n.js:77:27)
+          at 
+buildRootChain.next 
+(<anonymous>)
+      at loadPrivateP
+artialConfig (node_mo
+dules/@babel/core/lib
+/config/partial.js:72
+:62)
+          at loadPriv
+atePartialConfig.next
+ (<anonymous>)
+      at 
+loadPartialConfig (no
+de_modules/@babel/cor
+e/lib/config/partial.
+js:115:25)
+          at loadPart
+ialConfig.next 
+(<anonymous>)
+      at 
+evaluateSync (node_mo
+dules/gensync/index.j
+s:251:28)
+      at sync (node_m
+odules/gensync/index.
+js:89:14)
+      at stopHiding 
+- secret - don't use 
+this - v1 (node_modul
+es/@babel/core/lib/er
+rors/rewrite-stack-tr
+ace.js:47:12)
+      at loadPartialC
+onfigSync (node_modul
+es/@babel/core/lib/co
+nfig/index.js:37:84)
+      at 
+Module._compile (node
+_modules/pirates/lib/
+index.js:124:29)
+      at 
+Object.newLoader (nod
+e_modules/pirates/lib
+/index.js:134:7)
+
+Test Suites: 1 
+failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.092 s
+Ran all test suites 
+matching components/_
+_tests__/simple.test.
+js.

@@ -1,0 +1,195 @@
+﻿node.exe : npm warn 
+Unknown cli config 
+"--colors". This 
+will stop working in 
+the next major 
+version of npm.
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (npm war   
+ n Unknow...versi    
+on of npm.:Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+
+> fitness-backend@1.0.0 test
+> jest src/tests/auth.test.ts
+
+FAIL src/tests/auth.t
+est.ts
+  ÔùÅ Test suite 
+failed to run
+
+    [96msrc/tests/au
+th.test.ts[0m:[93m6
+6[0m:[93m55[0m - 
+[91merror[0m[90m 
+TS2552: [0mCannot 
+find name 
+'mockUser'. Did you 
+mean 'mockQuery'?
+
+    [7m66[0m       
+  mockQuery.mockResol
+vedValueOnce({ rows: 
+[{ ...mockUser }] });
+    [7m  [0m [91m 
+                     
+                     
+           
+~~~~~~~~[0m
+
+      [96msrc/tests/
+auth.test.ts[0m:[93
+m12[0m:[93m7[0m
+        [7m12[0m 
+const mockQuery = 
+query as jest.Mock;
+        [7m  [0m 
+[96m      
+~~~~~~~~~[0m
+        'mockQuery' 
+is declared here.
+    [96msrc/tests/au
+th.test.ts[0m:[93m1
+20[0m:[93m50[0m - 
+[91merror[0m[90m 
+TS2552: [0mCannot 
+find name 
+'mockUser'. Did you 
+mean 'mockQuery'?
+
+    [7m120[0m      
+   mockQuery.mockReso
+lvedValueOnce({ 
+rows: [mockUser] });
+    [7m   [0m 
+[91m                
+                     
+            
+~~~~~~~~[0m
+
+      [96msrc/tests/
+auth.test.ts[0m:[93
+m12[0m:[93m7[0m
+        [7m12[0m 
+const mockQuery = 
+query as jest.Mock;
+        [7m  [0m 
+[96m      
+~~~~~~~~~[0m
+        'mockQuery' 
+is declared here.
+    [96msrc/tests/au
+th.test.ts[0m:[93m1
+31[0m:[93m50[0m - 
+[91merror[0m[90m 
+TS2552: [0mCannot 
+find name 
+'mockUser'. Did you 
+mean 'mockQuery'?
+
+    [7m131[0m      
+   mockQuery.mockReso
+lvedValueOnce({ 
+rows: [mockUser] });
+    [7m   [0m 
+[91m                
+                     
+            
+~~~~~~~~[0m
+
+      [96msrc/tests/
+auth.test.ts[0m:[93
+m12[0m:[93m7[0m
+        [7m12[0m 
+const mockQuery = 
+query as jest.Mock;
+        [7m  [0m 
+[96m      
+~~~~~~~~~[0m
+        'mockQuery' 
+is declared here.
+    [96msrc/tests/au
+th.test.ts[0m:[93m1
+99[0m:[93m50[0m - 
+[91merror[0m[90m 
+TS2552: [0mCannot 
+find name 
+'mockUser'. Did you 
+mean 'mockQuery'?
+
+    [7m199[0m      
+   mockQuery.mockReso
+lvedValueOnce({ 
+rows: [mockUser] });
+    [7m   [0m 
+[91m                
+                     
+            
+~~~~~~~~[0m
+
+      [96msrc/tests/
+auth.test.ts[0m:[93
+m12[0m:[93m7[0m
+        [7m12[0m 
+const mockQuery = 
+query as jest.Mock;
+        [7m  [0m 
+[96m      
+~~~~~~~~~[0m
+        'mockQuery' 
+is declared here.
+    [96msrc/tests/au
+th.test.ts[0m:[93m2
+11[0m:[93m50[0m - 
+[91merror[0m[90m 
+TS2552: [0mCannot 
+find name 
+'mockUser'. Did you 
+mean 'mockQuery'?
+
+    [7m211[0m      
+   mockQuery.mockReso
+lvedValueOnce({ 
+rows: [mockUser] });
+    [7m   [0m 
+[91m                
+                     
+            
+~~~~~~~~[0m
+
+      [96msrc/tests/
+auth.test.ts[0m:[93
+m12[0m:[93m7[0m
+        [7m12[0m 
+const mockQuery = 
+query as jest.Mock;
+        [7m  [0m 
+[96m      
+~~~~~~~~~[0m
+        'mockQuery' 
+is declared here.
+
+Test Suites: 1 
+failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        1.512 s
+Ran all test suites 
+matching /src\\tests\
+\auth.test.ts/i.

@@ -1,0 +1,61 @@
+﻿node.exe : FAIL compo
+nents/__tests__/simpl
+e.test.js
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (FAIL co   
+ mponents/__tests    
+__/simple.test.j    
+s:String) [], Re    
+moteException
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  ÔùÅ Test suite 
+failed to run
+
+    ReferenceError: 
+You are trying to 
+`import` a file 
+outside of the scope 
+of the test code.
+
+      at 
+Runtime._execModule (
+node_modules/jest-run
+time/build/index.js:1
+216:13)
+      at require (nod
+e_modules/expo/src/wi
+nter/runtime.native.t
+s:20:43)
+      at getValue (no
+de_modules/expo/src/w
+inter/installGlobal.t
+s:97:21)
+      at Object.get 
+[as __ExpoImportMetaR
+egistry] (node_module
+s/expo/src/winter/ins
+tallGlobal.ts:44:16)
+
+Test Suites: 1 
+failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.421 s
+Ran all test suites 
+matching components/_
+_tests__/simple.test.
+js.

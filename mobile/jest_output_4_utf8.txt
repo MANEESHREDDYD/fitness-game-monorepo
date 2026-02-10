@@ -1,0 +1,80 @@
+﻿node.exe : FAIL compo
+nents/__tests__/simpl
+e.test.js
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (FAIL co   
+ mponents/__tests    
+__/simple.test.j    
+s:String) [], Re    
+moteException
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  ÔùÅ Test suite 
+failed to run
+
+    Cannot find 
+module 'react-native/
+Libraries/Animated/Na
+tiveAnimatedHelper' 
+from 'jest-setup.js'
+
+    [0m [90m 2 
+|[39m
+     [90m 3 |[39m 
+[90m// Silence the 
+warning: Animated: 
+`useNativeDriver` is 
+not supported 
+because the native 
+animated module is 
+missing[39m
+    [31m[1m>[22m[
+39m[90m 4 |[39m jes
+t[33m.[39mmock([32
+m'react-native/Librar
+ies/Animated/NativeAn
+imatedHelper'[39m)[
+33m;[39m
+     [90m   |[39m  
+    
+[31m[1m^[22m[39m
+     [90m 5 |[39m
+     [90m 6 |[39m 
+[90m// Mock Expo 
+Location[39m
+     [90m 7 |[39m j
+est[33m.[39mmock([
+32m'expo-location'[3
+9m[33m,[39m () 
+[33m=>[39m ({[0m
+
+      at Resolver._th
+rowModNotFoundError (
+node_modules/jest-res
+olve/build/index.js:8
+63:11)
+      at Object.mock 
+(jest-setup.js:4:6)
+
+Test Suites: 1 
+failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.534 s
+Ran all test suites 
+matching components/_
+_tests__/simple.test.
+js.

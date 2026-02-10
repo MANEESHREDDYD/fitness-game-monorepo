@@ -1,0 +1,232 @@
+﻿node.exe : FAIL compo
+nents/__tests__/simpl
+e.test.js
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (FAIL co   
+ mponents/__tests    
+__/simple.test.j    
+s:String) [], Re    
+moteException
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  ÔùÅ Test suite 
+failed to run
+
+    [BABEL] C:\Users\
+md200\OneDrive\Deskto
+p\fitness-game-monore
+po\mobile\node_module
+s\react-native\jest\r
+eact-native-env.js: 
+Cannot find module 'r
+eact-native-worklets/
+plugin'
+    Require stack:
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\reac
+t-native-reanimated\p
+lugin\index.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\babe
+l-preset-expo\build\i
+ndex.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\@bab
+el\core\lib\config\fi
+les\module-types.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\@bab
+el\core\lib\config\fi
+les\configuration.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\@bab
+el\core\lib\config\fi
+les\index.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\@bab
+el\core\lib\index.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\jest
+-snapshot\build\index
+.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\jest
+-runtime\build\index.
+js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\@jes
+t\core\build\index.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\jest
+-cli\build\index.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\jest
+-cli\bin\jest.js
+    - C:\Users\md200\
+OneDrive\Desktop\fitn
+ess-game-monorepo\mob
+ile\node_modules\jest
+\bin\jest.js (While 
+processing: "C:\\User
+s\\md200\\OneDrive\\D
+esktop\\fitness-game-
+monorepo\\mobile\\nod
+e_modules\\babel-pres
+et-expo\\build\\index
+.js")
+
+      at 
+Object.<anonymous> (n
+ode_modules/react-nat
+ive-reanimated/plugin
+/index.js:2:16)
+      at 
+Object.newLoader (nod
+e_modules/pirates/lib
+/index.js:134:7)
+      at 
+babelPresetExpo (node
+_modules/babel-preset
+-expo/build/index.js:
+291:62)
+      at sync (node_m
+odules/@babel/core/li
+b/gensync-utils/async
+.js:30:25)
+      at sync (node_m
+odules/gensync/index.
+js:182:19)
+      at node_modules
+/gensync/index.js:210
+:24
+      at node_modules
+/@babel/core/lib/conf
+ig/full.js:180:21
+      at 
+Function.<anonymous> 
+(node_modules/@babel/
+core/lib/gensync-util
+s/async.js:21:3)
+      at 
+evaluateSync (node_mo
+dules/gensync/index.j
+s:251:28)
+      at 
+Function.sync (node_m
+odules/gensync/index.
+js:89:14)
+      at sync (node_m
+odules/@babel/core/li
+b/gensync-utils/async
+.js:61:25)
+      at sync (node_m
+odules/gensync/index.
+js:182:19)
+      at 
+onFirstPause (node_mo
+dules/gensync/index.j
+s:210:24)
+      at 
+cachedFunction (node_
+modules/@babel/core/l
+ib/config/caching.js:
+52:46)
+          at 
+cachedFunction.next 
+(<anonymous>)
+      at 
+loadPresetDescriptor 
+(node_modules/@babel/
+core/lib/config/full.
+js:292:43)
+          at loadPres
+etDescriptor.next 
+(<anonymous>)
+      at recursePrese
+tDescriptors (node_mo
+dules/@babel/core/lib
+/config/full.js:77:31
+)
+          at recurseP
+resetDescriptors.next
+ (<anonymous>)
+      at node_modules
+/@babel/core/lib/conf
+ig/full.js:156:21
+      at 
+loadFullConfig (node_
+modules/@babel/core/l
+ib/config/full.js:113
+:5)
+          at 
+loadFullConfig.next 
+(<anonymous>)
+      at transform (n
+ode_modules/@babel/co
+re/lib/transform.js:2
+0:44)
+          at 
+transform.next 
+(<anonymous>)
+      at 
+evaluateSync (node_mo
+dules/gensync/index.j
+s:251:28)
+      at sync (node_m
+odules/gensync/index.
+js:89:14)
+      at stopHiding 
+- secret - don't use 
+this - v1 (node_modul
+es/@babel/core/lib/er
+rors/rewrite-stack-tr
+ace.js:47:12)
+      at 
+transformSync (node_m
+odules/@babel/core/li
+b/transform.js:40:76)
+
+Test Suites: 1 
+failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.229 s
+Ran all test suites 
+matching components/_
+_tests__/simple.test.
+js.

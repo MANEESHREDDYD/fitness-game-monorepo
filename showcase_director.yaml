@@ -1,0 +1,172 @@
+# ╔══════════════════════════════════════════════════════════════╗
+# ║     MAESTRO FLOW — Cinematic Showcase Director              ║
+# ║     Alternative to Python+ADB for teams using Maestro       ║
+# ╚══════════════════════════════════════════════════════════════╝
+#
+# Install: curl -fsSL https://get.maestro.mobile.dev | bash
+# Run:     maestro test showcase_director.yaml
+# Record:  maestro record showcase_director.yaml
+
+appId: com.fitnessgame.app
+
+---
+
+# ═══════════════════════════════════════════════════════════
+# SCENE 1: THE HOOK (0:00 - 0:05)
+# ═══════════════════════════════════════════════════════════
+
+- launchApp:
+    appId: com.fitnessgame.app
+    clearState: true
+
+- waitForAnimationToEnd:
+    timeout: 3000
+
+- tapOn:
+    id: "username-input"
+
+- inputText: "ProUser"
+
+- tapOn:
+    id: "password-input"
+
+- inputText: "password123"
+
+- tapOn:
+    id: "login-button"
+
+# Wait for Glassmorphism animation
+- waitForAnimationToEnd:
+    timeout: 2000
+
+- assertVisible: "SCORE"
+
+- takeScreenshot: scene1_hook
+
+# ═══════════════════════════════════════════════════════════
+# SCENE 2: THE TECH (0:05 - 0:15)
+# ═══════════════════════════════════════════════════════════
+
+# Set GPS to Central Park, Bethesda Terrace
+- setLocation:
+    latitude: 40.7736
+    longitude: -73.9712
+
+- waitForAnimationToEnd:
+    timeout: 1500
+
+# Pinch to zoom in
+- pinch:
+    scale: 1.5
+
+- waitForAnimationToEnd
+
+- pinch:
+    scale: 1.5
+
+- waitForAnimationToEnd
+
+# Toggle Voronoi territories
+- tapOn:
+    id: "territories-toggle"
+
+- waitForAnimationToEnd:
+    timeout: 2000
+
+- takeScreenshot: scene2_tech
+
+# ═══════════════════════════════════════════════════════════
+# SCENE 3: THE GAMEPLAY (0:15 - 0:25)
+# ═══════════════════════════════════════════════════════════
+
+# Walking path — 10 waypoints from Bethesda to zone
+- setLocation:
+    latitude: 40.7736
+    longitude: -73.9712
+- wait: 800
+
+- setLocation:
+    latitude: 40.7737
+    longitude: -73.9711
+- wait: 800
+
+- setLocation:
+    latitude: 40.7738
+    longitude: -73.9710
+- wait: 800
+
+- setLocation:
+    latitude: 40.7739
+    longitude: -73.9710
+- wait: 800
+
+- setLocation:
+    latitude: 40.7740
+    longitude: -73.9709
+- wait: 800
+
+- setLocation:
+    latitude: 40.7740
+    longitude: -73.9709
+- wait: 800
+
+- setLocation:
+    latitude: 40.7741
+    longitude: -73.9708
+- wait: 800
+
+- setLocation:
+    latitude: 40.7741
+    longitude: -73.9708
+- wait: 800
+
+- setLocation:
+    latitude: 40.7742
+    longitude: -73.9708
+- wait: 800
+
+- setLocation:
+    latitude: 40.7742
+    longitude: -73.9708
+
+# Wait for haptic pulse UI
+- wait: 3000
+
+- takeScreenshot: scene3_gameplay
+
+# ═══════════════════════════════════════════════════════════
+# SCENE 4: THE TWIST (0:25 - 0:35)
+# ═══════════════════════════════════════════════════════════
+
+# TELEPORT to Times Square (anti-cheat trigger)
+- setLocation:
+    latitude: 40.7580
+    longitude: -73.9855
+
+- wait: 3000
+
+- assertVisible:
+    text: "Suspicious"
+    optional: true
+
+- takeScreenshot: scene4_anticheat
+
+# ═══════════════════════════════════════════════════════════
+# SCENE 5: THE STATS (0:35 - 0:45)
+# ═══════════════════════════════════════════════════════════
+
+- tapOn:
+    id: "profile-tab"
+
+- waitForAnimationToEnd:
+    timeout: 1500
+
+- scrollUntilVisible:
+    element:
+      id: "skill-graph"
+    direction: DOWN
+    timeout: 5000
+
+- wait: 2000
+
+- takeScreenshot: scene5_stats

@@ -1,0 +1,21 @@
+id,username,matches_played,avg_speed,zones_owned,cheat_flags,last_active,is_churned
+1,user1,0,0,0,0,,1
+2,user2,0,0,0,0,,1
+3,user3,0,0,0,0,,1
+4,user4,0,0,0,0,,1
+5,user5,0,0,0,0,,1
+6,user6,0,0,0,0,,1
+7,user7,0,0,0,0,,1
+8,user8,0,0,0,0,,1
+9,user9,0,0,0,0,,1
+10,user10,0,0,0,0,,1
+11,user11,0,0,0,0,,1
+12,user12,0,0,0,0,,1
+13,user13,0,0,0,0,,1
+14,user14,0,0,0,0,,1
+15,user15,0,0,0,0,,1
+16,pro_player_1,2,3.00,0,1,Tue Feb 10 2026 14:03:07 GMT+0530 (India Standard Time),0
+17,pro_player_2,2,3.00,0,1,Tue Feb 10 2026 14:03:07 GMT+0530 (India Standard Time),0
+18,pro_player_3,2,3.00,0,1,Tue Feb 10 2026 14:03:07 GMT+0530 (India Standard Time),0
+19,pro_player_4,2,3.00,0,0,Tue Feb 10 2026 14:03:07 GMT+0530 (India Standard Time),0
+20,cheater_x,2,200.00,0,11,Tue Feb 10 2026 14:03:07 GMT+0530 (India Standard Time),0

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Game - Field Manual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00e676;
+            --primary-glow: rgba(0, 230, 118, 0.3);
+            --secondary: #00d4ff;
+            --bg: #0a0a0a;
+            --card: #181818;
+            --sidebar: #111111;
+            --text: #e0e0e0;
+            --text-dim: #999;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            display: flex;
+            scroll-behavior: smooth;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: var(--sidebar);
+            height: 100vh;
+            padding: 30px 20px;
+            position: fixed;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h2 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            flex: 1;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            color: var(--text-dim);
+            text-decoration: none;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.03);
+            color: white;
+        }
+
+        .nav-link.active {
+            background: rgba(0, 230, 118, 0.1);
+            color: var(--primary);
+        }
+
+        .nav-link i {
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 280px;
+            padding: 60px 80px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        section {
+            padding-bottom: 80px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #fff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .feature-card {
+            background: var(--card);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 230, 118, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            background: var(--primary-glow);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-dim);
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: var(--text-dim);
+            font-size: 1.05rem;
+        }
+
+        li strong {
+            color: var(--text);
+        }
+
+        code {
+            background: #2a2a2a;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: #ffab40;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9em;
+        }
+
+        .visual-mockup {
+            background: #000;
+            height: 200px;
+            border-radius: 12px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed #333;
+            color: #444;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #444;
+            font-size: 0.9em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            color: var(--text-dim);
+            font-weight: 700;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 900px) {
+            .sidebar {
+                display: none;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="sidebar">
+        <h2><i class="fas fa-bolt"></i> FIELD MANUAL</h2>
+        <div class="nav-links">
+            <a href="#intro" class="nav-link"><i class="fas fa-home"></i> Deployment</a>
+            <a href="#indoor" class="nav-link"><i class="fas fa-tachometer-alt"></i> Tactical HUD</a>
+            <a href="#squad" class="nav-link"><i class="fas fa-users"></i> Squad Racing</a>
+            <a href="#analytics" class="nav-link"><i class="fas fa-project-diagram"></i> Skill Profile</a>
+        </div>
+        <div style="color: #333; font-size: 0.8rem; font-weight: 800;">v1.0.4-STABLE</div>
+    </nav>
+
+    <main class="content">
+        <section id="intro">
+            <h1>Welcome, Operator.</h1>
+            <p class="subtitle">This is your comprehensive guide to the <strong>Fitness Game Architecture</strong>.
+                Master your telemetry, command your squad, and dominate the leaderboard.</p>
+        </section>
+
+        <section id="indoor">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-satellite-dish"></i></div>
+                <h2>The Tactical Dashboard</h2>
+                <p>Designed for resilience, the <strong>Tactical HUD</strong> activates when GPS satellite lock is
+                    compromised (Indoor/Urban Canyon environments).</p>
+                <ul>
+                    <li><strong>Adaptive Telemetry:</strong> High-frequency sampling of <code>accelerometer</code>
+                        events to calculate speed and calories.</li>
+                    <li><strong>Real-Time Analytics:</strong> View your current <code>Speed (KM/H)</code>,
+                        <code>Burn Rate (KCAL)</code>, and <code>Neural Sync (%)</code>.</li>
+                    <li><strong>Optimistic Updates:</strong> Powered by <strong>Zustand</strong> for zero-latency UI
+                        response during intense sprints.</li>
+                </ul>
+                <div class="visual-mockup">CYBERPUNK_HUD_RENDER.PNG</div>
+            </div>
+        </section>
+
+        <section id="squad">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+                <h2>Squad Logic & AI Bots</h2>
+                <p>Never train alone. Our <strong>Event-Driven Socket Layer</strong> connects you with high-performance
+                    AI agents.</p>
+                <ul>
+                    <li><strong>AI Agents:</strong> 4 specialized bots distributed across a <strong>Socket.io
+                            Cluster</strong>.</li>
+                    <li><strong>Zone Capture:</strong> Claim territory by staying in the Blue Radius. Red indicators
+                        signify bot dominance.</li>
+                    <li><strong>Tactile Feedback:</strong> Experience <strong>Haptic Micro-Vibrations</strong> via the
+                        <code>Native Taptic Engine</code> when zones are contested.</li>
+                </ul>
+                <div class="visual-mockup">SQUAD_MAP_OVERLAY.PNG</div>
+            </div>
+        </section>
+
+        <section id="analytics">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shapes"></i></div>
+                <h2>Hexagonal Skill Graph</h2>
+                <p>Quantify your athletic evolution across 6 biometric dimensions. Data is persisted via
+                    <strong>PostgreSQL</strong> and cached in <strong>Redis</strong>.</p>
+                <ul>
+                    <li><strong>SPEED:</strong> Measures your peak velocity achieved during sprints.</li>
+                    <li><strong>STAMINA:</strong> Your ability to maintain zone control over time.</li>
+                    <li><strong>STRENGTH:</strong> Vertical displacement and elevation gain metrics.</li>
+                    <li><strong>AGILITY:</strong> Cornering precision and directional shift latency.</li>
+                    <li><strong>POWER:</strong> Instantaneous watt output calculated from body mass and acceleration.
+                    </li>
+                    <li><strong>STRATEGY:</strong> Tactical placement and efficiency in capturing contested zones.</li>
+                </ul>
+                <div class="visual-mockup">RADAR_STATS_VISUALIZATION.SVG</div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-logo">FITNESS_GAME_CORE</div>
+            <div>&copy; 2026 // FAANG-GRADE ARCHITECTURE</div>
+        </footer>
+    </main>
+
+    <script>
+        // Smooth scroll and active link tracking
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.onscroll = () => {
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('.nav-links a[href*=' + id + ']').classList.add('active');
+                    });
+                    sec.classList.add('visible');
+                }
+            });
+        };
+
+        // Trigger first section visibility
+        window.onload = () => {
+            sections[0].classList.add('visible');
+            navLinks[0].classList.add('active');
+        };
+    </script>
+</body>
+
+</html>
